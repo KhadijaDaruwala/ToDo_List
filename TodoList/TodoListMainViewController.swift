@@ -10,16 +10,16 @@ import UIKit
 
 class TodoListMainViewController: UITableViewController {
     
-    let itemArray = ["Find Mike", "Buy Eggs", "Buy Chocolates"]
-let cellIndetifier = "toDoItemCell"
+    var itemArray = ["Find Mike", "Buy Eggs", "Buy Chocolates"]
+    let cellIndetifier = "toDoItemCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
-//MARK: Tableview data source methods
+    
+    
+    //MARK: Tableview data source methods
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -34,4 +34,31 @@ let cellIndetifier = "toDoItemCell"
         return cell
     }
     
+    //MARK: Tableview delegate methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        } else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //MARK: Add button
+    @IBAction func buttonAddItems(_ sender: Any) {
+        var itemTextfield = UITextField()
+        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add", style: .default) { (alertAction) in
+            self.itemArray.append(itemTextfield.text!)
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextfield) in
+            alertTextfield.placeholder = "Enter item"
+            itemTextfield = alertTextfield
+        }
+        alert.addAction(action)
+        
+        present(alert, animated:true, completion: nil)
+    }
 }
