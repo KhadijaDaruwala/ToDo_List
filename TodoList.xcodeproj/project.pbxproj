@@ -16,6 +16,7 @@
 		8E57B427241A2557007ECBEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E57B425241A2557007ECBEE /* LaunchScreen.storyboard */; };
 		8E57B432241A2558007ECBEE /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B431241A2558007ECBEE /* TodoListTests.swift */; };
 		8E57B43D241A2558007ECBEE /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B43C241A2558007ECBEE /* TodoListUITests.swift */; };
+		8E6C0534241FA258002AA00C /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C0533241FA258002AA00C /* CategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8E57B438241A2558007ECBEE /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E57B43C241A2558007ECBEE /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		8E57B43E241A2558007ECBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E6C0533241FA258002AA00C /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		8E57B44E241A5613007ECBEE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E6C0533241FA258002AA00C /* CategoryTableViewController.swift */,
 				8E57B41E241A2556007ECBEE /* TodoListMainViewController.swift */,
 			);
 			path = Controllers;
@@ -296,6 +299,7 @@
 			files = (
 				8E57B41F241A2556007ECBEE /* TodoListMainViewController.swift in Sources */,
 				8E02A331241B9E950059D568 /* DataModel.xcdatamodeld in Sources */,
+				8E6C0534241FA258002AA00C /* CategoryTableViewController.swift in Sources */,
 				8E57B41B241A2556007ECBEE /* AppDelegate.swift in Sources */,
 				8E57B41D241A2556007ECBEE /* SceneDelegate.swift in Sources */,
 			);

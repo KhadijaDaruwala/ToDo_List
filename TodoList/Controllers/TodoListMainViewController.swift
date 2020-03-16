@@ -14,7 +14,6 @@ class TodoListMainViewController: UITableViewController {
     
     var itemArray = [Item]()
     let cellIndetifier = "toDoItemCell"
-    let defaults = UserDefaults()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
@@ -70,6 +69,8 @@ class TodoListMainViewController: UITableViewController {
         present(alert, animated:true, completion: nil)
     }
     
+    
+    //MARK: Data manipulation
     func saveItems(){
         do {
             try context.save()
@@ -108,7 +109,7 @@ extension TodoListMainViewController: UISearchBarDelegate{
             loadItems()
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
-             }
+            }
         }
     }
 }
