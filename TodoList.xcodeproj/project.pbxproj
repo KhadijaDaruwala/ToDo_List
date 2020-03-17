@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2906EDD8D29122A7C16AFADE /* libPods-TodoListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9ED5C180A6325088E73C93 /* libPods-TodoListTests.a */; };
 		67D70D48469A3C3FB739BA9B /* libPods-TodoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B743AAABEE70A4626B050199 /* libPods-TodoList.a */; };
-		8E02A331241B9E950059D568 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E02A32F241B9E950059D568 /* DataModel.xcdatamodeld */; };
 		8E57B41B241A2556007ECBEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B41A241A2556007ECBEE /* AppDelegate.swift */; };
 		8E57B41D241A2556007ECBEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B41C241A2556007ECBEE /* SceneDelegate.swift */; };
 		8E57B41F241A2556007ECBEE /* TodoListMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B41E241A2556007ECBEE /* TodoListMainViewController.swift */; };
@@ -19,6 +18,8 @@
 		8E57B432241A2558007ECBEE /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B431241A2558007ECBEE /* TodoListTests.swift */; };
 		8E57B43D241A2558007ECBEE /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57B43C241A2558007ECBEE /* TodoListUITests.swift */; };
 		8E6C0534241FA258002AA00C /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C0533241FA258002AA00C /* CategoryTableViewController.swift */; };
+		8E882725242088A6009D05FE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E882724242088A6009D05FE /* Item.swift */; };
+		8E882727242088AF009D05FE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E882726242088AF009D05FE /* Category.swift */; };
 		F703CF59AD6409C996F8567B /* libPods-TodoList-TodoListUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3240A4E4F930BA00B77562 /* libPods-TodoList-TodoListUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,6 @@
 		0B9350CD8D8E0EA2D763544F /* Pods-TodoList-TodoListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList-TodoListUITests.release.xcconfig"; path = "Target Support Files/Pods-TodoList-TodoListUITests/Pods-TodoList-TodoListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0E9ED5C180A6325088E73C93 /* libPods-TodoListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodoListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBE182BF8FCE46596EFF40A /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
-		8E02A330241B9E950059D568 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8E57B417241A2556007ECBEE /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E57B41A241A2556007ECBEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E57B41C241A2556007ECBEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		8E57B43C241A2558007ECBEE /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		8E57B43E241A2558007ECBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6C0533241FA258002AA00C /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		8E882724242088A6009D05FE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8E882726242088AF009D05FE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A63DBF116A8A085FEBA6DD19 /* Pods-TodoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListTests/Pods-TodoListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3240A4E4F930BA00B77562 /* libPods-TodoList-TodoListUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodoList-TodoListUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B615354D0F180E29C77B2611 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +117,6 @@
 				A63DBF116A8A085FEBA6DD19 /* Pods-TodoListTests.debug.xcconfig */,
 				EEE757F41AFFF4A200F4D35A /* Pods-TodoListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,7 +177,8 @@
 		8E57B44D241A55F5007ECBEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8E02A32F241B9E950059D568 /* DataModel.xcdatamodeld */,
+				8E882726242088AF009D05FE /* Category.swift */,
+				8E882724242088A6009D05FE /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,10 +413,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E57B41F241A2556007ECBEE /* TodoListMainViewController.swift in Sources */,
-				8E02A331241B9E950059D568 /* DataModel.xcdatamodeld in Sources */,
 				8E6C0534241FA258002AA00C /* CategoryTableViewController.swift in Sources */,
 				8E57B41B241A2556007ECBEE /* AppDelegate.swift in Sources */,
+				8E882725242088A6009D05FE /* Item.swift in Sources */,
 				8E57B41D241A2556007ECBEE /* SceneDelegate.swift in Sources */,
+				8E882727242088AF009D05FE /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,19 +746,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8E02A32F241B9E950059D568 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8E02A330241B9E950059D568 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 8E02A330241B9E950059D568 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8E57B40F241A2556007ECBEE /* Project object */;
 }
