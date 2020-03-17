@@ -71,6 +71,7 @@ class TodoListMainViewController: UITableViewController {
                     try self.relam.write(){
                         let newItem = Item()
                         newItem.title = itemTextfield.text!
+                        newItem.dateCreated = Date()
                         currentCategory.items.append(newItem)
                     }
                 }catch {
@@ -98,27 +99,24 @@ class TodoListMainViewController: UITableViewController {
     }
 }
 
-////MARK: Search bar delegate methods
-//extension TodoListMainViewController: UISearchBarDelegate{
-//
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        let request: NSFetchRequest<Item> = Item.fetchRequest()
-//        var predicate: NSPredicate?
-//
-//        if let searchText = searchBar.text, searchText != ""{
-//            predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchText)
-//            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-//        }
-//        loadItems(with: request, predicate: predicate!)
-//    }
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchBar.text?.count == 0{
-//            loadItems()
-//            DispatchQueue.main.async {
-//                searchBar.resignFirstResponder()
-//            }
-//        }
-//    }
-//}
+//MARK: Search bar delegate methods
+extension TodoListMainViewController: UISearchBarDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let searchText = searchBar.text, searchText != ""{
+            itemArray = itemArray?.filter("title CONTAINS[cd] %@", searchText).sorted(byKeyPath: "dateCreated", ascending: true)
+            tableView.reloadData()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0{
+            loadItems()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+}
 
