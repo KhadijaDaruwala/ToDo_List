@@ -7,6 +7,8 @@ target 'TodoList' do
 pod 'RealmSwift', :modular_headers => true
 pod 'Realm', :modular_headers => true
 pod 'SwipeCellKit'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
 
   target 'TodoListTests' do
     inherit! :search_paths
